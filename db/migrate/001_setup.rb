@@ -299,15 +299,16 @@ class Setup < ActiveRecord::Migration
     Permission.create :controller => "versions", :action => "destroy_file", :description => "button_delete", :sort => 1322
 
     # create default administrator account
-    user = User.create :login => "admin",
-                       :hashed_password => "d033e22ae348aeb5660fc2140aec35850c4da997",
+    user = User.create :login => "amair",
+                       :hashed_password => "670a240889385ca1cb37c4d22876a0cdccd9eddb",
                        :admin => true,
-                       :firstname => "OpenProject",
-                       :lastname => "Admin",
-                       :mail => "admin@example.net",
+                       :firstname => "Alastair",
+                       :lastname => "Mair",
+                       :mail => "alastair.mair@regenersis.com",
                        :mail_notification => true,
                        :language => "en",
-                       :status => 1
+                       :status => 1,
+                        :salt => "74cf98c730d1f5b1ba807e630c71ac33
   end
 
   def self.down
